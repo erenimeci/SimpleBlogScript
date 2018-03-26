@@ -1,0 +1,19 @@
+﻿@using BS.WebMvc.UI.Models
+@model BS.WebMvc.UI.Models.ArticleViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="card mb-4">
+    <div class="card-body">
+        <h2 class="card-title">@Model.Article.ArticleTitle</h2>
+        <p class="card-text">@Model.Article.ArticleText</p>
+
+    </div>
+    <div class="card-footer text-muted">
+        Posted on @Model.Article.CreatedAt 
+    </div>
+</div>

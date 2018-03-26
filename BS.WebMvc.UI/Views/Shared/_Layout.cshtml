@@ -1,0 +1,171 @@
+﻿@using BS.Model.Entities
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Blog Home - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/Assets/Css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="~/Assets/Css/blog-home.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+
+
+            @Html.ActionLink("Start Bootstrap", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    </li>
+
+
+                    @{
+
+                        if (Session["User"] != null)
+                        {
+                            <li class="nav-item">
+                                @Html.ActionLink("Admin", "Index", "Admin", new { area = "" }, new { @class = "navbar-brand" })
+                            </li>
+
+                        }
+                    }
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Blog Entries Column -->
+            <div class="col-md-8">
+
+                <h1 class="my-4">
+                    Page Heading
+                    <small>Secondary Text</small>
+                </h1>
+
+
+
+                @RenderBody()
+
+
+            </div>
+
+            <!-- Sidebar Widgets Column -->
+            <div class="col-md-4">
+                @{
+                    if (Session["User"] != null)
+                    {
+
+                        <!-- Side Widget -->
+                        <div class="card my-4">
+                            <h5 class="card-header">Welcome</h5>
+                            <div class="card-body">
+                                @{
+
+                        BS.Model.Entities.User kisi = ((BS.Model.Entities.User)(Session["User"]));
+
+
+                        <h1>
+                            @kisi.Name.ToString()    @kisi.Surname.ToString()
+                        </h1>
+                                }
+                            </div>
+                        </div>
+
+
+
+                    }
+                    else
+                    {
+                        <div class="card my-4">
+                            <form class="login-form" method="post" action="@Url.Action("Index", "Home")">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <input id="email" type="text" class="form-control" name="userName" placeholder="UserName">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                    <input id="password" type="password" class="form-control" name="userPass" placeholder="Password">
+                                </div>
+                                <br>
+                                <button class="btn btn-success">login</button>
+                            </form>
+                        </div>
+                        <div class="card my-4">
+                            <form class="login-form" method="post" action="@Url.Action("SignIn", "Home")">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <input id="email" type="text" class="form-control" name="SignUserName" placeholder="UserName">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <input id="email" type="text" class="form-control" name="SignName" placeholder="Name">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <input id="email" type="text" class="form-control" name="Signsurname" placeholder="Surname">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                    <input id="password" type="password" class="form-control" name="SignuserPass" placeholder="Password">
+                                </div>
+                                <br>
+                                <button class="btn btn-success">Sign Up</button>
+                            </form>
+                        </div>
+                    }
+
+
+
+                }
+
+
+
+
+
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/Assets/js/jquery.min.js"></script>
+    <script src="~/Assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
+

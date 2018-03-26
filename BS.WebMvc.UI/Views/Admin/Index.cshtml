@@ -1,0 +1,32 @@
+﻿@using BS.WebMvc.UI.Models
+@model BS.WebMvc.UI.Models.HomeViewModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+
+
+    <div class="col-md-6">
+        <div>
+            @Html.ActionLink("Yeni Yazı", "NewArticle", "Admin", null, new { @class = "btn btn-primary" })
+        </div>
+        <br />
+        <ul class="list-group">
+            <li class="list-group-item active">
+                Yazılar
+            </li>
+            @foreach (var item in Model.Article)
+            {
+                <li class="list-group-item">
+                    @Html.ActionLink("Düzenle", "EditArticle", "Admin", new { ID = item.ID }, new { @class = "btn btn-warning btn-xs" })
+                    @Html.ActionLink("Sil", "RemoveArticle", "Admin", new { ID = item.ID }, new { @class = "btn btn-danger btn-xs" })
+                    <span class="glyphicon glyphicon-user"></span> @(item.ArticleTitle) 
+                </li>
+            }
+        </ul>
+    </div>
+
+</div>

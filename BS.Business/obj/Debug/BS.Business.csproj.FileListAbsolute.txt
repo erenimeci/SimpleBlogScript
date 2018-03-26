@@ -1,0 +1,13 @@
+C:\Users\CihaNalan\documents\visual studio 2013\Projects\BlogScript\BS.Business\bin\Debug\BS.Business.dll
+C:\Users\CihaNalan\documents\visual studio 2013\Projects\BlogScript\BS.Business\bin\Debug\BS.Business.pdb
+C:\Users\CihaNalan\documents\visual studio 2013\Projects\BlogScript\BS.Business\bin\Debug\BS.Core.dll
+C:\Users\CihaNalan\documents\visual studio 2013\Projects\BlogScript\BS.Business\bin\Debug\BS.DataAccess.dll
+C:\Users\CihaNalan\documents\visual studio 2013\Projects\BlogScript\BS.Business\bin\Debug\BS.Model.dll
+C:\Users\CihaNalan\documents\visual studio 2013\Projects\BlogScript\BS.Business\bin\Debug\EntityFramework.dll
+C:\Users\CihaNalan\documents\visual studio 2013\Projects\BlogScript\BS.Business\bin\Debug\BS.Core.pdb
+C:\Users\CihaNalan\documents\visual studio 2013\Projects\BlogScript\BS.Business\bin\Debug\BS.DataAccess.pdb
+C:\Users\CihaNalan\documents\visual studio 2013\Projects\BlogScript\BS.Business\bin\Debug\BS.Model.pdb
+C:\Users\CihaNalan\documents\visual studio 2013\Projects\BlogScript\BS.Business\bin\Debug\EntityFramework.xml
+C:\Users\CihaNalan\documents\visual studio 2013\Projects\BlogScript\BS.Business\obj\Debug\BS.Business.csprojResolveAssemblyReference.cache
+C:\Users\CihaNalan\documents\visual studio 2013\Projects\BlogScript\BS.Business\obj\Debug\BS.Business.dll
+C:\Users\CihaNalan\documents\visual studio 2013\Projects\BlogScript\BS.Business\obj\Debug\BS.Business.pdb

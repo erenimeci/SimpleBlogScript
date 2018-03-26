@@ -1,0 +1,12 @@
+C:\Users\CihaNalan\documents\visual studio 2013\Projects\BlogScript\BS.Model\bin\Debug\BS.Model.dll.config
+C:\Users\CihaNalan\documents\visual studio 2013\Projects\BlogScript\BS.Model\bin\Debug\BS.Model.dll
+C:\Users\CihaNalan\documents\visual studio 2013\Projects\BlogScript\BS.Model\bin\Debug\BS.Model.pdb
+C:\Users\CihaNalan\documents\visual studio 2013\Projects\BlogScript\BS.Model\bin\Debug\BS.Core.dll
+C:\Users\CihaNalan\documents\visual studio 2013\Projects\BlogScript\BS.Model\bin\Debug\EntityFramework.dll
+C:\Users\CihaNalan\documents\visual studio 2013\Projects\BlogScript\BS.Model\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\CihaNalan\documents\visual studio 2013\Projects\BlogScript\BS.Model\bin\Debug\BS.Core.pdb
+C:\Users\CihaNalan\documents\visual studio 2013\Projects\BlogScript\BS.Model\bin\Debug\EntityFramework.xml
+C:\Users\CihaNalan\documents\visual studio 2013\Projects\BlogScript\BS.Model\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\CihaNalan\documents\visual studio 2013\Projects\BlogScript\BS.Model\obj\Debug\BS.Model.csprojResolveAssemblyReference.cache
+C:\Users\CihaNalan\documents\visual studio 2013\Projects\BlogScript\BS.Model\obj\Debug\BS.Model.dll
+C:\Users\CihaNalan\documents\visual studio 2013\Projects\BlogScript\BS.Model\obj\Debug\BS.Model.pdb

@@ -1,0 +1,36 @@
+﻿@using BS.WebMvc.UI.Models
+@model ArticleViewModel
+@{
+    ViewBag.Title = "RemoveArticle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<p>
+    <h2>Aşağıdaki Yazı kaydını silmek istediğinizden emin misiniz?</h2>
+</p>
+<table>
+    <tr>
+        <td><b>ArticleTitle:</b></td>
+        <td>@Model.Article.ArticleTitle</td>
+    </tr>
+    <tr>
+        <td><b>ArticleText:</b></td>
+        <td>@Model.Article.ArticleText</td>
+    </tr>
+</table>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken();
+    <input type="submit" class="btn btn-danger" value="Sil" />
+}
+
+<div class="input-group">
+    @if (ViewBag.Result != null)
+    {
+        <div class="alert alert-@ViewBag.Status">
+            @ViewBag.Result
+        </div>
+    }
+</div>

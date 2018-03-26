@@ -1,0 +1,45 @@
+﻿@using BS.WebMvc.UI.Models
+@model ArticleViewModel
+@{
+    ViewBag.Title = "EditArticle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Duzenle</h2>
+
+
+@using (Html.BeginForm())
+{
+
+    @Html.AntiForgeryToken()
+    @Html.HiddenFor(x => x.Article.ID)
+    <div class="input-group">
+        <div class="input-group-addon" id="txtArticleTitle">
+            ArticleTitle
+        </div>
+        @Html.TextBoxFor(x => x.Article.ArticleTitle, new { @class = "form-control", placeholder = "ArticleTitle", aria_describedby = "txtArticleTitle" })
+    </div>
+    <br />
+
+    <div class="input-group">
+        <div class="input-group-addon" id="txtArticleText">
+            ArticleText
+        </div>
+        @Html.TextBoxFor(x => x.Article.ArticleText, new { @class = "form-control", placeholder = "ArticleText", aria_describedby = "txtArticleText" })
+    </div>
+    <br />
+    <div class="input-group">
+        <input type="submit" class="btn btn-success" value="Güncelle" />
+    </div>
+    <br />
+    <div class="input-group">
+        @if (ViewBag.Result != null)
+        {
+            <div class="alert alert-@ViewBag.Status">
+                @ViewBag.Result
+            </div>
+        }
+    </div>
+
+}

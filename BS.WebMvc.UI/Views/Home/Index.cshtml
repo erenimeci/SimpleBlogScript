@@ -1,0 +1,29 @@
+﻿@using BS.WebMvc.UI.Models
+@model HomeViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@foreach (var item in Model.Article)
+{
+
+    <div class="card mb-4">
+        <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+        <div class="card-body">
+            <h2 class="card-title">@item.ArticleTitle</h2>
+            <p class="card-text">@item.ArticleText</p>
+
+            @Html.ActionLink("Read More", "Index", "Article", new { ID = item.ID }, new { @class = "btn btn btn-primary" })
+
+        </div>
+        <div class="card-footer text-muted">
+            Posted on @item.CreatedAt by
+            <a href="#">
+                @Model.User.FirstOrDefault(x => x.ID == item.CreatedBy.ID).UserName.ToString();
+            </a>
+        </div>
+    </div>
+}
+
